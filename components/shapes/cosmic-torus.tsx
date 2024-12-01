@@ -5,6 +5,7 @@ import { useFrame } from "@react-three/fiber";
 import { MeshDistortMaterial } from "@react-three/drei";
 import { Mesh, Color } from "three";
 import { useTheme } from "next-themes";
+import * as THREE from 'three';
 
 export function CosmicTorus() {
   const meshRef = useRef<Mesh>(null);

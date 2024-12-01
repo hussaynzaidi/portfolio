@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Mesh, Color } from "three";
 import { useTheme } from "next-themes";
+import * as THREE from 'three';
 
 export function Nebula() {
   const meshRef = useRef<Mesh>(null);
@@ -12,7 +13,8 @@ export function Nebula() {
   useFrame((state) => {
     if (meshRef.current) {
       meshRef.current.rotation.z += 0.001;
-      meshRef.current.material.opacity = 0.2 + Math.sin(state.clock.elapsedTime * 0.3) * 0.1;
+      const material = meshRef.current.material as THREE.MeshBasicMaterial;
+      material.opacity = 0.2 + Math.sin(state.clock.elapsedTime * 0.3) * 0.1;
     }
   });
 

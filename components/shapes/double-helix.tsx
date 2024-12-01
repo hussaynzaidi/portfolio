@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Vector3 } from "three";
 import { useTheme } from "next-themes";
+import * as THREE from 'three';
 
 export function DoubleHelix() {
   const groupRef = useRef<THREE.Group>(null);
