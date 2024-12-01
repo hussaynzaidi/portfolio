@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
-import admin from "../assets/admin.PNG";
+import admin from "../assets/admin.png";
 import store from "../assets/store.png";
 import tehvar from "../assets/tehvar.png";
 
