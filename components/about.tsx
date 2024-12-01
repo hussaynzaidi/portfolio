@@ -8,17 +8,17 @@ export function About() {
     {
       icon: Code2,
       title: "Frontend Development",
-      description: "Expert in React, Next.js, and modern frontend architecture",
+      description: "I'm apt with React, Next.js, and modern frontend architecture",
     },
     {
       icon: Database,
       title: "Backend Development",
-      description: "Building robust APIs with Node.js and TypeScript",
+      description: "This is my favourite part. Building robust APIs with Node.js and TypeScript",
     },
     {
       icon: Layers,
       title: "Full-Stack Integration",
-      description: "Seamlessly connecting frontend and backend systems",
+      description: "Seamlessly connecting frontend and backend systems with databases and third party integrations",
     },
   ];
 

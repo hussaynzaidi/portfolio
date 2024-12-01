@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, Github, Linkedin, Mail } from "lucide-react";
 import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
@@ -16,6 +16,24 @@ export function Navigation() {
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" },
+  ];
+
+  const socialLinks = [
+    { 
+      href: "https://www.linkedin.com/in/atiqueulhussainzaidi", 
+      icon: Linkedin, 
+      label: "LinkedIn" 
+    },
+    { 
+      href: "https://github.com/hussaynzaidi", 
+      icon: Github, 
+      label: "GitHub" 
+    },
+    { 
+      href: "mailto:atiqueulhussainz@gmail.com", 
+      icon: Mail, 
+      label: "Email" 
+    },
   ];
 
   return (
@@ -40,15 +58,30 @@ export function Navigation() {
             ))}
           </div>
           
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          >
-            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            <span className="sr-only">Toggle theme</span>
-          </Button>
+          <div className="flex items-center gap-2">
+            {socialLinks.map(({ href, icon: Icon, label }) => (
+              <a
+                key={href}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 hover:text-primary transition-colors"
+                aria-label={label}
+              >
+                <Icon className="h-5 w-5" />
+              </a>
+            ))}
+            
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            >
+              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <span className="sr-only">Toggle theme</span>
+            </Button>
+          </div>
         </div>
       </div>
     </nav>

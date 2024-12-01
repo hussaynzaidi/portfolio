@@ -3,22 +3,32 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
+import admin from "../assets/admin.PNG";
+import store from "../assets/store.png";
+import tehvar from "../assets/tehvar.png";
 
 export function Projects() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with Next.js, TypeScript, and tRPC",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
-      github: "#",
-      demo: "#",
+      title: "E-Commerce Admin Dashboard",
+      description: "Multi-store Admin Dashboard for E-commerce platform. Built on Next.js 14. Added Clerk Authentication, Stripe checkouts, Shadcn for UI, Supabase and Prisma for the database.",
+      image: admin,
+      github: "https://github.com/hussaynzaidi/ecommerce-admin",
+      demo: "https://ecommerce-admin-eight-flax.vercel.app/",
     },
     {
-      title: "Real-time Chat App",
-      description: "Modern chat application using Next.js, Socket.io, and Prisma",
-      image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80",
-      github: "#",
-      demo: "#",
+      title: "E-Commerce Store",
+      description: "Online store for E-commerce platform. Built on Next.js 14. Added Clerk Authentication, Stripe checkouts, Shadcn for UI, Supabase and Prisma for the database.",
+      image: store,
+      github: "https://github.com/hussaynzaidi/ecommerce-store",
+      demo: "https://ecommerce-store-zeta-two.vercel.app/",
+    },
+    {
+      title: "Tehvar",
+      description: "Modern event management system using React, and Supabase. Tehvar aims to solve the biggest problem in any event - documentation issues. It seemlessly provides the participant to register in one spot, and feeds the data to a meticously crafted database built for use in an admin panel. On the managing side, it provides a one stop solution to all documentation related to an event like attendees, sponsors, vendors, etc.",
+      image: tehvar,
+      github: "https://github.com/hussaynzaidi/tehvar",
+      demo: "https://tehvar.vercel.app",
     },
   ];
 

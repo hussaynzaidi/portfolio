@@ -8,6 +8,8 @@ import { Starfield } from "./shapes/starfield";
 import { Nebula } from "./shapes/nebula";
 import Image from "next/image";
 import { Sandwich } from "./shapes/sandwich";
+import hussain from "@/assets/hussain.jpeg";
+import { TypeWriter } from "./ui/type-writer";
 
 export function Hero() {
   return (
@@ -19,7 +21,7 @@ export function Hero() {
           transition={{ duration: 0.8 }}
           className="relative"
         >
-                    <motion.div
+          <motion.div
             className="relative w-64 h-64 mx-auto lg:mx-0 mb-8 lg:mb-0"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -29,7 +31,7 @@ export function Hero() {
             <div className="absolute inset-[3px] rounded-full bg-gradient-to-r from-background to-background/90 p-1">
               <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=500&h=500&q=80"
+                  src={hussain}
                   alt="Profile"
                   fill
                   className="object-cover"
@@ -43,11 +45,19 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
+            <TypeWriter 
+              text="Hi there! I'm Hussain."
+              className="block text-2xl font-medium mb-4 text-primary justify-self-end"
+              speed={70}
+            />
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Full-Stack React Developer
+            I'm a Full-Stack
+            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+             Web Dev
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              Crafting modern web applications with React, Next.js, and TypeScript
+              I make modern web applications with React, Next.js, and TypeScript
             </p>
             <motion.div
               initial={{ opacity: 0 }}
@@ -68,7 +78,6 @@ export function Hero() {
           <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 12], fov: 75 }}>
             <ambientLight intensity={0.5} />
             <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={0.8} />
-            {/* <Nebula /> */}
             <Starfield />
             <Sandwich />
             <CosmicTorus />
